@@ -65,8 +65,8 @@ const CoffeeCard = ({ coffees, setCoffees, coffeesProduct }) => {
 
 CoffeeCard.propTypes = {
     coffees: PropTypes.object.isRequired,
-    coffeesProduct: PropTypes.object.isRequired,
-    setCoffees: PropTypes.object.isRequired
+    coffeesProduct: PropTypes.array.isRequired,
+    setCoffees: PropTypes.func.isRequired
 
 }
 export default CoffeeCard;
