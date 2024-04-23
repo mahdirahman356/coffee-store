@@ -18,7 +18,7 @@ const Create = () => {
         let photo = form.photo.value
         let create = {name, chef, supplier, test, category, details, photo,}
         console.log(create)
-        fetch("http://localhost:5000/coffees", {
+        fetch("https://coffee-store-sarver-rho.vercel.app/coffees", {
             method: "POST",
             headers: {"content-type" : "application/json"},
             body : JSON.stringify(create)

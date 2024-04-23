@@ -22,7 +22,7 @@ const CoffeeCard = ({ coffees, setCoffees, coffeesProduct }) => {
         })
             .then((result) => {
                 if (result.isConfirmed) {
-                    fetch(`http://localhost:5000/coffees/${_id}`, {
+                    fetch(`https://coffee-store-sarver-rho.vercel.app/coffees/${_id}`, {
                         method: "DELETE"
                     })
                         .then(res => res.json())
@@ -44,7 +44,7 @@ const CoffeeCard = ({ coffees, setCoffees, coffeesProduct }) => {
     }
     return (
         <div className=''>
-            <div className="card card-side h-full p-7 flex flex-col md:flex-row items-center gap-3 justify-between bg-[#ebe9e2]">
+            <div className="card card-side h-full p-7 flex flex-col lg:flex-row items-center gap-3 justify-between bg-[#ebe9e2]">
                 <figure><img src={photo} alt="Movie" /></figure>
 
                 <div className='space-y-1'>
@@ -52,7 +52,7 @@ const CoffeeCard = ({ coffees, setCoffees, coffeesProduct }) => {
                     <p className='font-semibold text-gray-600'>Chef : <span className='font-normal'>{chef}</span></p>
                     <p className='font-semibold text-gray-600'>Supplier : <span className='font-normal'>{supplier}</span></p>
                 </div>
-                <div className="flex flex-row md:flex-col gap-3">
+                <div className="flex flex-row lg:flex-col gap-3">
                     <Link to={`/coffeeDetails/${_id}`}><button className="btn bg-[#D2B48C]"><IoMdEye className='text-[25px] text-white' /></button></Link>
                     <Link to={`/update/${_id}`}><button className="btn bg-[#3C393B]"><HiPencil className='text-[25px] text-white' /></button></Link>
                     <button onClick={() => handleDelete(_id)} className="btn bg-[#EA4744]"><MdDelete className='text-[25px] text-white' /></button>

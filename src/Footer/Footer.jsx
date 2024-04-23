@@ -1,8 +1,8 @@
-
+import footerBg from "../assets/images/more/13.jpg"
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-base-200 text-base-content mt-24 mb-0">
+            <footer className="footer p-10 bg-base-200 text-base-content mt-24 mb-0" style={{backgroundImage: `url(${footerBg})`}}>
   <aside>
     <p className="footer-title">ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
   </aside> 

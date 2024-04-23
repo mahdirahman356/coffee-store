@@ -12,7 +12,7 @@ const UpdateUsers = () => {
         let password = form.password.value
         let user = {email, password}
         console.log(user)
-        fetch(`http://localhost:5000/users/${users._id}`, {
+        fetch(`https://coffee-store-sarver-rho.vercel.app/users/${users._id}`, {
             method: "PUT",
             headers: {"content-type" : "application/json"},
             body: JSON.stringify(user)

@@ -16,7 +16,7 @@ const Update = () => {
         let photo = form.photo.value
         let create = {name, chef, supplier, test, category, details, photo,}
         console.log(create)
-        fetch(`http://localhost:5000/coffees/${coffees._id}`, {
+        fetch(`https://coffee-store-sarver-rho.vercel.app/coffees/${coffees._id}`, {
             method:"PUT",
             headers: {"content-type" : "application/json"},
             body : JSON.stringify(create)

@@ -18,7 +18,7 @@ const SingUp = () => {
             const usercreationTime = result.user?.metadata?.creationTime            
             const users = {email,password, usercreationTime: usercreationTime}
             console.log(result.user)
-            fetch("http://localhost:5000/users", {
+            fetch("https://coffee-store-sarver-rho.vercel.app/users", {
                 method:"POST",
                 headers: {"content-type" : "application/json"},
                 body: JSON.stringify(users)

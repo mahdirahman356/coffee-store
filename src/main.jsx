@@ -22,7 +22,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch("http://localhost:5000/coffees"),
+        loader: () => fetch("https://coffee-store-sarver-rho.vercel.app/coffees"),
         element: <Home></Home>
       },
       {
@@ -31,12 +31,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/update/:id",
-        loader: ({ params }) => fetch(`http://localhost:5000/coffees/${params.id}`),
+        loader: ({ params }) => fetch(`https://coffee-store-sarver-rho.vercel.app/coffees/${params.id}`),
         element: <Update></Update>
       },
       {
         path: "/coffeeDetails/:id",
-        loader: ({ params }) => fetch(`http://localhost:5000/coffees/${params.id}`),
+        loader: ({ params }) => fetch(`https://coffee-store-sarver-rho.vercel.app/coffees/${params.id}`),
         element: <CoffeeDetails></CoffeeDetails>
 
       },
@@ -50,12 +50,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/users",
-        loader: () => fetch("http://localhost:5000/users"),
+        loader: () => fetch("https://coffee-store-sarver-rho.vercel.app/users"),
         element:<Users></Users>
       },
       {
         path: "/updateUsers/:id",
-        loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`),
+        loader: ({params}) => fetch(`https://coffee-store-sarver-rho.vercel.app/users/${params.id}`),
         element:<UpdateUsers></UpdateUsers>
       }
     ]
