@@ -14,6 +14,7 @@ import Login from './Components/Login';
 import SingUp from './Components/SingUp';
 import Context from './Context/Context';
 import Users from './Components/Users';
+import UpdateUsers from './Components/UpdateUsers';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -51,6 +52,11 @@ const router = createBrowserRouter([
         path: "/users",
         loader: () => fetch("http://localhost:5000/users"),
         element:<Users></Users>
+      },
+      {
+        path: "/updateUsers/:id",
+        loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`),
+        element:<UpdateUsers></UpdateUsers>
       }
     ]
   },

@@ -51,7 +51,7 @@ const Login = () => {
                     </div>
                 </div>
 
-                <input className="btn text-[20px] rancho-regular bg-[#D2B48C] w-full my-6" type="submit" value="Add Coffee" />
+                <input className="btn text-[20px] rancho-regular bg-[#D2B48C] w-full my-6" type="submit" value="Login Youn Account" />
                 <p className="raleway">Dont have an account? <Link to="/singup"><span className="text-[#D2B48C] underline">Create an account</span></Link> </p>
             </form>
         </div>

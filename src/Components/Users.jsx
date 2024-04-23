@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import '../App.css'
 import { HiPencil } from "react-icons/hi2";
 import { MdDelete } from "react-icons/md";
@@ -47,7 +47,7 @@ const Users = () => {
         <table className="table table-xs table-pin-rows table-pin-cols">
           <thead>
             <tr>
-              <th></th>
+              <th>ID</th>
               <th>Email</th>
               <th>Creation Time</th>
               <th>Update User</th>
@@ -60,7 +60,7 @@ const Users = () => {
           <td className="font-semibold">{index + 1}</td>
           <td>{user.email}</td>
           <td>{user.usercreationTime}</td>
-          <td><button className="btn bg-[#3C393B]"><HiPencil className='text-[18px] text-white' /></button></td>
+          <td><Link to={`/updateUsers/${user._id}`}><button className="btn bg-[#3C393B]"><HiPencil className='text-[18px] text-white' /></button></Link></td>
           <td><button onClick={() => handleUserDelet(user._id)} className="btn bg-[#EA4744]"><MdDelete className='text-[18px] text-white' /></button></td> 
         </tr>
       </tbody>)

@@ -4,12 +4,12 @@ import Footer from "./Footer/Footer";
 
 const MainRoute = () => {
     return (
-        <div className="">
+        <div>
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
         </div>
-    );
-};
+    )
+}
 
 export default MainRoute;
